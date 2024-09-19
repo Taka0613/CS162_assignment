@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub-like Academic Integrity Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>GitHub-like Academic Integrity Checker</h1>
+        <p>A platform for managing group projects with accountability, quality checks, plagiarism detection, and
+            milestone tracking</p>
+    </header>
+
+    <!-- Task Upload Section -->
+    <section class="task-upload">
+        <h2>Upload Your Task</h2>
+        <form action="#">
+            <div class="form-group">
+                <label for="task">Task Description:</label>
+                <textarea id="task" name="task" rows="4" cols="50" placeholder="Describe your task here..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="upload">Upload File:</label>
+                <input type="file" id="upload" name="upload">
+            </div>
+
+            <div class="form-group">
+                <label for="acceptance">AI-Generated Acceptance Criteria:</label>
+                <textarea id="acceptance" name="acceptance" rows="4" cols="50"
+                    placeholder="Are the survey questions clear? Is the analysis accurate?"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Submit Task</button>
+        </form>
+    </section>
+
+    <!-- Task Review Section -->
+    <section class="task-review">
+        <h2>Review Task</h2>
+        <div class="task">
+            <h3>Task: Survey Design</h3>
+            <p>Submitted by: John Doe</p>
+            <p>Acceptance Criteria: "Are the questions clear and non-misleading?"</p>
+
+            <!-- Rubric-Based Review -->
+            <h4>Rubric-Based Review</h4>
+            <table class="rubric-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Rating (1-5)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Clarity of Questions</td>
+                        <td><input type="number" min="1" max="5" value="4" class="rating-input"></td>
+                    </tr>
+                    <tr>
+                        <td>Relevance to Audience</td>
+                        <td><input type="number" min="1" max="5" value="5" class="rating-input"></td>
+                    </tr>
+                    <tr>
+                        <td>Non-Misleading Nature</td>
+                        <td><input type="number" min="1" max="5" value="3" class="rating-input"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <label for="feedback">Additional Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="3" cols="50"
+                    placeholder="Provide detailed feedback..."></textarea>
+            </div>
+
+            <button class="btn-approve">Approve</button>
+            <button class="btn-request">Request Changes</button>
+        </div>
+    </section>
+
+    <!-- Task Progress Updates and Milestones -->
+    <section class="progress-updates">
+        <h2>Task Milestones and Progress</h2>
+        <table class="progress-table">
+            <thead>
+                <tr>
+                    <th>Group Member</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Progress</th>
+                    <th>Milestones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>Survey Design</td>
+                    <td>In Progress</td>
+                    <td>50%</td>
+                    <td>
+                        <ul>
+                            <li class="completed">Milestone 1: Initial Draft (Completed)</li>
+                            <li class="in-progress">Milestone 2: Peer Review (In Progress)</li>
+                            <li class="pending">Milestone 3: Final Version (Pending)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Data Analysis</td>
+                    <td>Not Started</td>
+                    <td>0%</td>
+                    <td>
+                        <ul>
+                            <li class="pending">Milestone 1: Data Collection (Pending)</li>
+                            <li class="pending">Milestone 2: Analysis (Pending)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Michael Lee</td>
+                    <td>Report Writing</td>
+                    <td>Completed</td>
+                    <td>100%</td>
+                    <td>
+                        <ul>
+                            <li class="completed">Milestone 1: Draft Report (Completed)</li>
+                            <li class="completed">Milestone 2: Final Submission (Completed)</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Plagiarism Detector Section -->
+    <section class="plagiarism-detector">
+        <h2>Plagiarism Detector</h2>
+        <p>Upload your group submission to check for plagiarism:</p>
+        <form action="#">
+            <div class="form-group">
+                <label for="plagiarism-upload">Upload File for Plagiarism Check:</label>
+                <input type="file" id="plagiarism-upload" name="plagiarism-upload">
+            </div>
+
+            <button type="submit" class="btn-primary">Check for Plagiarism</button>
+        </form>
+
+        <div class="plagiarism-result">
+            <h3>Plagiarism Check Result</h3>
+            <p><strong>Status:</strong> No plagiarism detected!</p>
+            <p><strong>Originality:</strong> 98% Original</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>GitHub-like Academic Integrity Checker &copy; 2024</p>
+    </footer>
+</body>
+
+</html>
